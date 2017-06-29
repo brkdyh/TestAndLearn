@@ -12,14 +12,27 @@ namespace CSConsole
     /// </summary>
     class MainLoop
     {
+        static int FrameCount = 5;
+
         static bool Exit = false;
 
         static void Main(string[] args)
         {
+            Thread.Sleep(1000);
+
+            LogicEnter.Instance().Awake();
+
+            LogicEnter.Instance().Start();
+
             while (!Exit)
             {
-                Thread.Sleep(100);
-                ProjectEnter.Instance().Update();
+                LogicEnter.Instance().Update();
+
+                LogicEnter.Instance().LateUpdate();
+
+                Thread.Sleep((1000 / FrameCount));
+
+                Time.CalDeltaTime();
             }
         }
     }

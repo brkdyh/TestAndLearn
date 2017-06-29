@@ -43,11 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\ActiveOnRuntimeAttribute.cs" />
     <Compile Include="Logic\DebugLogger.cs" />
+    <Compile Include="Logic\ILogicEnter.cs" />
+    <Compile Include="Logic\LogicBehavior.cs" />
     <Compile Include="Logic\LogicManager.cs" />
-    <Compile Include="ProjectEnter.cs" />
-    <Compile Include="MainEnter.cs" />
+    <Compile Include="Logic\LogicEnter.cs" />
+    <Compile Include="Logic\LogicObject.cs" />
+    <Compile Include="Logic\LogicUtil.cs" />
+    <Compile Include="Logic\Object.cs" />
+    <Compile Include="Logic\Time.cs" />
+    <Compile Include="MainLoop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\DebugBehavior.cs" />
+    <Compile Include="Test\HellowWroldBr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
