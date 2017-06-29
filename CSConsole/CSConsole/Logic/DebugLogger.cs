@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace CSConsole
 {
-    class Program
+    public class DebugLogger
     {
-        static void Main(string[] args)
+        public static void Log(string log)
         {
+            Console.WriteLine(log);
         }
     }
 }

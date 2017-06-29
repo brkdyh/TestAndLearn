@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Logic\DebugLogger.cs" />
+    <Compile Include="Logic\LogicManager.cs" />
+    <Compile Include="ProjectEnter.cs" />
+    <Compile Include="MainEnter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
