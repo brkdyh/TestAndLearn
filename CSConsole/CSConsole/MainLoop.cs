@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace CSConsole
 {
-    class MainEnter
+    /// <summary>
+    /// Mian Loop
+    /// </summary>
+    class MainLoop
     {
         static bool Exit = false;
 
