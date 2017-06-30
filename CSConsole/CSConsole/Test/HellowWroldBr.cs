@@ -16,12 +16,16 @@ namespace CSConsole.Test
             base.Awake();
             DebugLogger.Log("Hellow Wrold！");
             //Console.BackgroundColor = ConsoleColor.Blue;
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Cyan;
         }
 
         public override void Update()
         {
-            DebugLogger.Log("Update at : " + DateTime.Now + " delta Time :" + Time.DeltaTime);
+            for (int i = 0; i < 100000000; i++)
+            {
+
+            }
+            DebugLogger.Log("Update at : " + DateTime.Now + " delta Time :" + Time.DeltaTime + "  ==> Wait for Update Time: " + Time.WaitForUpdateTime +"  ==>  UpateTime :" + Time.UpdateTime);
         }
     }
 }

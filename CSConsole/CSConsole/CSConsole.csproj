@@ -53,6 +53,7 @@
     <Compile Include="Logic\LogicUtil.cs" />
     <Compile Include="Logic\Object.cs" />
     <Compile Include="Logic\Time.cs" />
+    <Compile Include="Logic\TimeSample.cs" />
     <Compile Include="MainLoop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test\DebugBehavior.cs" />

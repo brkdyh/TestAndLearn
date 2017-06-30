@@ -8,9 +8,11 @@ namespace CSConsole
 {
     public class Time
     {
+        
+
         static DateTime FrontFrameTime = DateTime.Now;
 
-        public static float DeltaTime
+        public static double DeltaTime
         {
             private set;
             get;
@@ -19,8 +21,18 @@ namespace CSConsole
         public static void CalDeltaTime()
         {
             DateTime Now = DateTime.Now;
-            DeltaTime = (float)Math.Abs(Now.Millisecond - FrontFrameTime.Millisecond);
+            DeltaTime = (Now - FrontFrameTime).TotalMilliseconds;
             FrontFrameTime = Now;
+        }
+
+        public static double WaitForUpdateTime
+        {
+            get { return MainLoop.WaitForUpdateTime; }
+        }
+
+        public static double UpdateTime
+        {
+            get { return MainLoop.UpdateTime; }
         }
     }
 }

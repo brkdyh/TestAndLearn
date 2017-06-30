@@ -12,9 +12,21 @@ namespace CSConsole
     /// </summary>
     class MainLoop
     {
-        static int FrameCount = 5;
+        static int TargetFrameCount = 1;
 
         static bool Exit = false;
+
+        public static double WaitForUpdateTime
+        {
+            private set;
+            get;
+        }
+
+        public static double UpdateTime
+        {
+            private set;
+            get;
+        }
 
         static void Main(string[] args)
         {
@@ -26,13 +38,35 @@ namespace CSConsole
 
             while (!Exit)
             {
+                ulong uSample = TimeSample.BeginSample();
+
                 LogicEnter.Instance().Update();
 
                 LogicEnter.Instance().LateUpdate();
 
-                Thread.Sleep((1000 / FrameCount));
+                TimeSpan t = TimeSample.EndSample(uSample);
+
+                WaitForUpdate(t);
 
                 Time.CalDeltaTime();
+            }
+
+            Console.Read();
+        }
+
+        static void WaitForUpdate(TimeSpan t)
+        {
+            double dT = t.TotalMilliseconds;
+
+            if (dT == 0) dT = 0.001d;
+
+            UpdateTime = dT;
+
+            WaitForUpdateTime = ((1000d / TargetFrameCount) - dT);
+
+            if (WaitForUpdateTime > 0)
+            {
+                Thread.Sleep((int)WaitForUpdateTime + 1);
             }
         }
     }
