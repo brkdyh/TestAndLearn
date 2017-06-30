@@ -1,1 +1,1 @@
-my git test file!
+my git test file! from local res 2!
