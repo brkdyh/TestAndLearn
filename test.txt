@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 my git test file!from local res 1
+=======
+my git test file! from local res 2!
+>>>>>>> b42f9405d20c2e093695ed71f6a9bb09d9ee863e
