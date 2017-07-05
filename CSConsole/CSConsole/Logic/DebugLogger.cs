@@ -12,5 +12,12 @@ namespace CSConsole
         {
             Console.WriteLine(log);
         }
+
+        public static void Log(string log,ConsoleColor col)
+        {
+            Console.ForegroundColor = col;
+            Log(log);
+            Console.ResetColor();
+        }
     }
 }

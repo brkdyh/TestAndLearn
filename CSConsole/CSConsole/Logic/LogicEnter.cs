@@ -31,8 +31,6 @@ namespace CSConsole
 
             foreach (Type t in types)
             {
-                //DebugLogger.Log(t.ToString());
-
                 var cads = t.CustomAttributes;
 
                 foreach (CustomAttributeData cad in cads)
@@ -61,7 +59,7 @@ namespace CSConsole
 
         public void Start()
         {
-            Init();
+
         }
 
         public void LateUpdate()

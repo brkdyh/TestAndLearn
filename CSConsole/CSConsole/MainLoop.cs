@@ -12,7 +12,7 @@ namespace CSConsole
     /// </summary>
     class MainLoop
     {
-        static int TargetFrameCount = 1;
+        static int TargetFrameCount = 10;
 
         static bool Exit = false;
 
@@ -31,6 +31,8 @@ namespace CSConsole
         static void Main(string[] args)
         {
             Thread.Sleep(1000);
+
+            LogicEnter.Instance().Init();
 
             LogicEnter.Instance().Awake();
 

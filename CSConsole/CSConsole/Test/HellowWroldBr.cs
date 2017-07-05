@@ -9,23 +9,25 @@ namespace CSConsole.Test
     [ActiveOnRuntime]
     public class HellowWroldBr : LogicBehavior
     {
-        float fTimer = 0;
+        double timer = 0f;
 
         public override void Awake()
         {
             base.Awake();
-            DebugLogger.Log("Hellow Wrold！");
-            //Console.BackgroundColor = ConsoleColor.Blue;
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            DebugLogger.Log("Hellow Wrold！", ConsoleColor.Green);
         }
 
         public override void Update()
         {
-            for (int i = 0; i < 100000000; i++)
-            {
+            //for (int i = 0; i < 100000000; i++)
+            //{
 
-            }
-            DebugLogger.Log("Update at : " + DateTime.Now + " delta Time :" + Time.DeltaTime + "  ==> Wait for Update Time: " + Time.WaitForUpdateTime +"  ==>  UpateTime :" + Time.UpdateTime);
+            //}
+            DebugLogger.Log("Update at : " + DateTime.Now + " delta Time :" + Time.DeltaTime + "  ==> Wait for Update Time: " + Time.WaitForUpdateTime + "  ==>  UpateTime :" + Time.UpdateTime, ConsoleColor.Red);
+
+            timer += Time.DeltaTime;
+
+            DebugLogger.Log("Time sciene start : " + (timer / 1000).ToString("0.00"), ConsoleColor.Yellow);
         }
     }
 }

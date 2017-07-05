@@ -14,5 +14,10 @@ namespace CSConsole.Test
             base.Awake();
             DebugLogger.Log("Awake!");
         }
+
+        public override void Update()
+        {
+
+        }
     }
 }
